@@ -5,14 +5,27 @@
 body {
     height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px; 
+}
+
+.header button {
+    height : 50px;
 }
 
 .container {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .grid-row {
@@ -22,6 +35,6 @@ body {
 
 .grid-cell {
     border: 1px solid black;
-    height: 6.25vh;
+    height: 5vh;
     aspect-ratio: 1 / 1;
 }
