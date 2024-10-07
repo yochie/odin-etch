@@ -11,3 +11,13 @@ for (let i = 0; i < gridSize; i++) {
     }
     container.appendChild(row);
 }
+
+container.addEventListener("mouseover", hover);
+
+function hover(mouseEvent) {
+    if(mouseEvent.target.className == "container"){
+        return;
+    }
+
+    mouseEvent.target.style.backgroundColor = "red";
+}
