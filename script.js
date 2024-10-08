@@ -10,8 +10,13 @@ function hover(mouseEvent) {
     if (mouseEvent.target.className == "container") {
         return;
     }
-
-    mouseEvent.target.style.backgroundColor = "red";
+    const randomHue = Math.floor(Math.random() * 360) + "deg";
+    const saturation = "90%";
+    const lightness = "50%"
+    const randomColor = `hsl(${randomHue} ${saturation} ${lightness})`
+    mouseEvent.target.style.backgroundColor = randomColor;
+    const previousOpacity = +mouseEvent.target.style.opacity;
+    mouseEvent.target.style.opacity = Math.min(previousOpacity + 0.1, 1);
 }
 
 let resizeButton = document.querySelector(".resize-button");
@@ -43,6 +48,7 @@ function generateGrid(gridSize) {
             div.className = "grid-cell";
             div.style.width = gridWidth / gridSize + "px";
             div.style.height = gridWidth / gridSize + "px";
+            div.style.opacity = 0;
             row.appendChild(div);
         }
         container.appendChild(row);
