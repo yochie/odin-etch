@@ -13,14 +13,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px; 
+    padding: 20px 60px;
 }
 
 .header button {
-    height : 50px;
+    height: 50px;
 }
 
 .container {
+    flex: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
