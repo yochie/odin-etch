@@ -31,11 +31,10 @@ body {
 
 .grid-row {
     display: flex;
-    flex-direction: row;
 }
 
 .grid-cell {
     border: 1px solid black;
-    height: 5vh;
-    aspect-ratio: 1 / 1;
+    height: 40px;
+    width: 40px;
 }
