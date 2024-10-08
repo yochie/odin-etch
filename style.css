@@ -31,8 +31,14 @@ body {
 
 .grid-row {
     display: flex;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
-.grid-cell {
-    border: 1px solid black;
+.grid-row:first-child {
+    border-top: 2px solid black;
+}
+
+.grid-row:last-child {
+    border-bottom: 2px solid black;
 }
