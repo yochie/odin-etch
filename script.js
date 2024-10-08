@@ -7,7 +7,7 @@ generateGrid(defaultGridSize);
 
 container.addEventListener("mouseover", hover);
 function hover(mouseEvent) {
-    if (mouseEvent.target.className == "container") {
+    if (mouseEvent.target.className !== "grid-cell") {
         return;
     }
     const randomHue = Math.floor(Math.random() * 360) + "deg";
